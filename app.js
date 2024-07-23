@@ -4,6 +4,7 @@ const chrome = require('selenium-webdriver/chrome');
 const { removeConsoleHandler } = require('selenium-webdriver/lib/logging');
 
 func = async (drop, tut, add) => {
+    let count = 0;
     let driver = await new Builder().forBrowser(Browser.CHROME).setChromeOptions(new chrome.Options().setPageLoadStrategy('eager'))//.addArguments('--headless=new'))
         .build();
     await driver.manage().setTimeouts({ implicit: 30000 });
@@ -29,14 +30,14 @@ func = async (drop, tut, add) => {
             console.log('Successfully switched classes');
             break;
         } catch {
-            console.log('Couldn\'t switch classes. Trying again.');
+            console.log('Couldn\'t switch classes. Try: ' + count);
             continue;
         }
     }
 
 }
 
-6927
+
 if ((argv.length - 2) % 3 != 0) {
     console.log('Invalid number of arguments');
     throw 'Invalid number of arguments';
