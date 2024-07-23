@@ -1,0 +1,14 @@
+{
+  "name": "auto-class",
+  "version": "1.0.0",
+  "description": "Auto-swaps UW classes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Luu",
+  "license": "ISC",
+  "dependencies": {
+    "selenium-webdriver": "^4.23.0"
+  }
+}
